@@ -18,24 +18,24 @@ namespace Domain.Cuentas
             cuenta = cuentas;
         }
 
-        public void AddCuenta(int cedula, decimal cuenta)
-        {
-            #region conexión
-            SqlConnection sql = new SqlConnection();
-            sql.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\omarm\source\repos\DomainDrivenDesign\Infraestructure\BusinessDB.mdf;Integrated Security=True";
-            sql.Open();
-            Console.WriteLine($"{sql.State}");
-            #endregion
+        //public void AddCuenta(int cedula, decimal cuenta)
+        //{
+        //    #region conexión
+        //    SqlConnection sql = new SqlConnection();
+        //    sql.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\omarm\source\repos\DomainDrivenDesign\Infraestructure\BusinessDB.mdf;Integrated Security=True";
+        //    sql.Open();
+        //    Console.WriteLine($"{sql.State}");
+        //    #endregion
 
-            SqlCommand command = new SqlCommand("ppInsertCuenta", sql);
-            command.Parameters.AddWithValue("@cedula", cedula);
-            command.Parameters.AddWithValue("@Cuentas", cuenta);
+        //    SqlCommand command = new SqlCommand("ppInsertCuenta", sql);
+        //    command.Parameters.AddWithValue("@cedula", cedula);
+        //    command.Parameters.AddWithValue("@Cuentas", cuenta);
 
-            //Ejecución de comando
-            command.CommandType = System.Data.CommandType.StoredProcedure;
-            int Resultado = command.ExecuteNonQuery();
-            Console.WriteLine($"Registros ingresados: {Resultado}");
-            command.Parameters.Clear();
-        }
+        //    //Ejecución de comando
+        //    command.CommandType = System.Data.CommandType.StoredProcedure;
+        //    int Resultado = command.ExecuteNonQuery();
+        //    Console.WriteLine($"Registros ingresados: {Resultado}");
+        //    command.Parameters.Clear();
+        //}
     }
 }

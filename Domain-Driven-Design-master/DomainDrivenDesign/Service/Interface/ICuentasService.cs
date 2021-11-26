@@ -9,11 +9,11 @@ namespace DomainDrivenDesign.Service.Interface
 {
     public interface IClienteService
     {
-        public void AddCliente(Cliente cliente);
+        //public void AddCliente(Cliente cliente);
 
-        public void UpdateCliente(Cliente cliente);
+        //public void UpdateCliente(Cliente cliente);
 
-        public void GetListaClientes();
+        //public void GetListaClientes();
        
     }
 }

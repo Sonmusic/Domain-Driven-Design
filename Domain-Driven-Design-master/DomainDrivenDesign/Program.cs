@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DomainDrivenDesign.Service.Impl;
+using static Domain.Sucursales.Sucursal;
 
 namespace DomainDrivenDesign
 {
@@ -35,7 +36,7 @@ namespace DomainDrivenDesign
 
             #region Agregar cuentas
             decimal n = 12314124;
-            Domain.Cuentas.Cuentas cuenta1 = new Domain.Cuentas.Cuentas(1234, n);
+            Domain.Cuentas.Cuentas cuenta1 = new Domain.Cuentas.Cuentas(1234, n, (int)Sucursales.Santiago);
             CuentasService.AddCuenta(cuenta1);
             #endregion
             Console.ReadKey();

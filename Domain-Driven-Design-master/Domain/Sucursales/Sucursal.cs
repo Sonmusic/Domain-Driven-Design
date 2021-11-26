@@ -14,5 +14,13 @@ namespace Domain.Sucursales
         {
             localización = location;
         }
+
+        public enum Sucursales: int 
+        {
+            Santiago,
+            SantoDomingo,
+            LaVega
+
+        }
     }
 }
